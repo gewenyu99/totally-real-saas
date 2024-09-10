@@ -25,3 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: node ace test
+    - name: Sleep for 30 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '300s'
