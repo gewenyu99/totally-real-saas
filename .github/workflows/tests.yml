@@ -24,8 +24,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - name: Smoke Tests
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '30s'
     - run: node ace test
-    - name: Sleep for 30 seconds
+    - name: E2E Tests
       uses: jakejarvis/wait-action@master
       with:
         time: '300s'
