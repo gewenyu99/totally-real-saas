@@ -20,7 +20,7 @@ test.group('UsersController', () => {
 
   test('get a second user by id', async ({ client }) => {
     const userId = '2' // Assuming 1 is a valid user ID for testing
-    const response = await client.get(`${BASE_URL}/users/${userId}`).withCsrfToken()
+    const response = await client.get(`${BASE_URL}/user/${userId}`).withCsrfToken()
     assert.equal(response.status(), 200) // Add assertion for status code
     response.assertBodyContains({
       id: userId, // Assuming 2 is the new user ID
