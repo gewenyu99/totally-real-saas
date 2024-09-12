@@ -15,11 +15,11 @@ const PostController = () => import('#controllers/posts_controller')
 router.on('/').render('pages/home')
 router.group(() => {
     // User APIs
-    router.get('/users', [UsersController, 'index'])
-    router.get('/users/:id', [UsersController, 'show'])
-    router.post('/users', [UsersController, 'store'])
-    router.put('/users/:id', [UsersController, 'update'])
-    router.delete('/users/:id', [UsersController, 'destroy'])
+    router.get('/user', [UsersController, 'index'])
+    router.get('/user/:id', [UsersController, 'show'])
+    router.post('/user', [UsersController, 'store'])
+    router.put('/user/:id', [UsersController, 'update'])
+    router.delete('/user/:id', [UsersController, 'destroy'])
 
     // Post APIs
     router.get('/posts', [PostController, 'index'])
