@@ -27,9 +27,9 @@ jobs:
     - name: Smoke Tests
       uses: jakejarvis/wait-action@master
       with:
-        time: '30s'
+        time: '60s'
     - run: node ace test
     - name: E2E Tests
       uses: jakejarvis/wait-action@master
       with:
-        time: '300s'
+        time: '100'
